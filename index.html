@@ -160,8 +160,8 @@
     <header>
         <h1>Virtual Roll Call</h1>
         <p>Secure Operations Support & Operational Resource Information Portal</p>
+        <p style="margin-top: 10px; opacity: 0.9;">Last updated: <span id="automated-date">Loading...</span></p>
     </header>
-    <div class="last-updated">Last updated: September 15, 2026</div>
 
     <main class="container">
         
@@ -225,5 +225,19 @@
         <p>&copy; 2026 Virtual Roll Call App. All rights reserved. Built for secure public safety infrastructure.</p>
     </footer>
 
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Reads the file's last modified timestamp from the GitHub Pages server
+        const lastMod = new Date(document.lastModified);
+        
+        // Options to format the date neatly (e.g., "August 1, 2026")
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        const formattedDate = lastMod.toLocaleDateString('en-US', options);
+        
+        // Inserts the formatted date directly into your text
+        document.getElementById('automated-date').textContent = formattedDate;
+    });
+</script>
+    
 </body>
 </html>
