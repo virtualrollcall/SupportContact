@@ -1,1 +1,229 @@
-support page initial create
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Roll Call — Support & Privacy Info</title>
+    <style>
+        /* Base Reset & Variables */
+        :root {
+            --primary-color: #1a2b4c;
+            --text-color: #333333;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --border-color: #e9ecef;
+            --accent-color: #4a5568;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            line-height: 1.6;
+            padding: 0;
+        }
+
+        /* Header Styling */
+        header {
+            background-color: var(--primary-color);
+            color: #ffffff;
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 4px solid var(--accent-color);
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+        }
+
+        header p {
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* Layout Container */
+        .container {
+            max-width: 850px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* Typography & Headings */
+        h2 {
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            margin-bottom: 25px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        h3 {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            margin-top: 10px;
+            margin-bottom: 15px;
+        }
+
+        /* Card Elements */
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+        }
+
+        /* Lists formatting */
+        ul {
+            list-style-type: none;
+        }
+
+        li {
+            margin-bottom: 20px;
+            padding-left: 15px;
+            position: relative;
+        }
+
+        /* Custom list markers */
+        li::before {
+            content: "•";
+            color: var(--accent-color);
+            font-weight: bold;
+            font-size: 1.2rem;
+            position: absolute;
+            left: 0;
+            top: -2px;
+        }
+
+        li strong {
+            color: #000000;
+            display: inline;
+        }
+
+        /* Specialized Highlight Support Card */
+        .support-card {
+            background-color: #edf2f7;
+            border-left: 5px solid var(--primary-color);
+        }
+
+        .support-item {
+            margin-bottom: 10px;
+            padding-left: 0;
+        }
+
+        .support-item::before {
+            content: "";
+        }
+
+        /* Links styling */
+        a {
+            color: #2b6cb0;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer styling */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 0.9rem;
+            color: #718096;
+            border-top: 1px solid var(--border-color);
+            margin-top: 60px;
+        }
+
+        /* Responsive adaptations */
+        @media (max-width: 600px) {
+            header h1 { font-size: 1.75rem; }
+            .card { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Virtual Roll Call</h1>
+        <p>Secure Operations Support & Operational Resource Information Portal</p>
+    </header>
+    <div class="last-updated">Last updated: September 15, 2026</div>
+
+    <main class="container">
+        
+        <!-- Welcome Card -->
+        <div class="card">
+            <p>Welcome to the <strong>Virtual Roll Call</strong> Support Page. Virtual Roll Call is a secure, private enterprise operations and communication utility built exclusively for authorized government agencies, public safety departments, and their personnel.</p>
+        </div>
+
+        <!-- FAQ Section -->
+        <h2>Frequently Asked Questions (FAQs)</h2>
+
+        <div class="card">
+            <h3>1. Managing Your Posts and Comments</h3>
+            <ul>
+                <li><strong>Creating Content:</strong> Tap the "+" icon to draft an agency post, or tap "Comment" below existing updates. You can type plaintext or attach imagery.</li>
+                <li><strong>Searching for Posts:</strong> Use the global search bar located at the top of your feed to query existing posts and comments by keyword or phrase.</li>
+                <li><strong>Saving a Post:</strong> Tap the bookmark icon on any post to instantly save it to your personal reference list. You can review your saved list at any time via your account profile menu.</li>
+                <li><strong>Deleting Your Content:</strong> If you make a mistake or need to remove a post or comment you authored, tap the "Delete" button on that item. It will be immediately hidden from your coworkers and the live operational feed.</li>
+                <li><strong>Public Sector Record Auditing:</strong> To comply with state and federal statutory record-retention laws, transparency requirements, and internal audit protocols, all communication data—including deleted posts or comments—remains logged securely within read-only administrative archives. These logs are accessible solely to your agency's designated system administrators for official compliance tracking.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>2. Departmental Provisioning & Account Management</h3>
+            <p style="margin-bottom: 15px;">Because Virtual Roll Call is an enterprise-level government utility:</p>
+            <ul>
+                <li><strong>Account Setup:</strong> Your organizational admin creates your department, establishes user clearances, and issues secure sign-in tokens. There is no public user registration.</li>
+                <li><strong>Account Deletion:</strong> Individual users cannot delete their profile from within the active application layout. To request profile deactivation or to clear your credential assignment, coordinate directly with your organization’s technical officer or internal system administrator.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>3. Native Device Permissions Explained</h3>
+            <p style="margin-bottom: 15px;">Virtual Roll Call relies on the following native iOS systems to perform localized operations. We only request these when you explicitly initiate an action:</p>
+            <ul>
+                <li><strong>Face ID / Touch ID:</strong> Interfaces directly with the native iOS Keychain. It stores encrypted credentials locally in your device's hardware Enclave to support fast biometrically verified authentication. <strong>Virtual Roll Call never processes, transmits, or logs your biometric data.</strong></li>
+                <li><strong>Camera Access:</strong> Prompts your permission to capture an on-demand picture to add immediately into a live agency post or status comment.</li>
+                <li><strong>Photo Library Access:</strong> Allows you to browse, multi-select, and upload existing assets saved onto your device camera roll.</li>
+            </ul>
+        </div>
+
+        <!-- Support / Contact Section -->
+        <h2>Contact Support & Agency Moderation</h2>
+        <div class="card support-card">
+            <p style="margin-bottom: 15px;">If you encounter software errors, login sync anomalies, or need to flag a violation of professional conduct rules:</p>
+            <ul>
+                <li class="support-item"><strong>Technical Support Email:</strong> <a href="mailto:support@yourdomain.com">support@yourdomain.com</a> <em>(Please update to your actual support email)</em></li>
+                <li class="support-item"><strong>Service Levels:</strong> Inquiries are prioritized based on agency tiering and typically answered within <strong>24 hours</strong>.</li>
+            </ul>
+        </div>
+
+        <!-- Integration Section -->
+        <h2>Privacy Policy Integration</h2>
+        <div class="card">
+            <p>We maintain strict control barriers. We do not participate in cross-app tracking networks, consumer data harvesting, or ad brokers. To cross-reference our operational security design, review our full comprehensive policy document here: <a href="URL_TO_YOUR_GITHUB_PAGES_PRIVACY_POLICY">Virtual Roll Call Privacy Policy</a>.</p>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Virtual Roll Call App. All rights reserved. Built for secure public safety infrastructure.</p>
+    </footer>
+
+</body>
+</html>
